@@ -47,5 +47,5 @@ bin/connect-standalone.sh config/connect-standalone.properties config/connect-fi
 
 The defaults are as below 
 file=test.txt
-topic=connect-test
+topic=connect-test  -- use this topic as a hook for spark to stream to
 sinkFile = test.sink.txt
