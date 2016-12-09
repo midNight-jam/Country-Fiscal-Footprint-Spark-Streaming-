@@ -43,9 +43,9 @@ spark-submit  --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.0.1 <
 
 Step 6:
 Use Kafka Connect to import/export data 
+bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
 
 The defaults are as below 
-
 file=test.txt
 topic=connect-test
 sinkFile = test.sink.txt
