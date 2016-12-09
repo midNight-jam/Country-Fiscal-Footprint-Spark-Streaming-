@@ -38,3 +38,14 @@ Step for spark + kafka integration
 
 
 spark-submit  --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.0.1 <flie.py> --verbose
+
+----------------------------------------------------------------
+
+Step 6:
+Use Kafka Connect to import/export data 
+
+The defaults are as below 
+
+file=test.txt
+topic=connect-test
+sinkFile = test.sink.txt
