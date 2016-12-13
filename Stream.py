@@ -1,3 +1,4 @@
+import json
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
@@ -14,16 +15,9 @@ ssc = StreamingContext(sc,1)
 topic  = "connect-test"
 kvs = KafkaUtils.createStream(ssc,"localhost:2181","spark-streaming-consumer",{topic:1})
 lines = kvs.map(lambda x:x[1])
+# parsed = kvs.map(lambda (k, v): json.loads(v))
 
-allWords = lines.flatMap(lambda line: line.split(","))
 
-words = allWords.map(lambda word:(word,1))
-print("word count below")
-print(words.count())
-
-wordCount = words.reduceByKey(lambda a,b:a+b)
-
-wordCount.saveAsTextFiles("/home/jayam/PycharmProjects/FirstSpark/output/sparkOutput.txt")
 
 ssc.start()         #start the computation
 ssc.awaitTermination()      #wait for computation to terminate
