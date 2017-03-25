@@ -2,7 +2,7 @@
 
     Installation 
 
-#Kafka
+	#Kafka
 	
 Download  kafka from https://kafka.apache.org/downloads.html 
 
@@ -39,7 +39,7 @@ If all the configs are correct this data should reflect in both fiscal.data and 
 
 
 
-#Spark
+	#Spark
 	
 To download spark in your system use this url 
 
@@ -63,14 +63,14 @@ If the spark Job is started successfully after submission and we can read the lo
 
 To be assure that spark is listening to the kafka stream, again use the same test command form kafka installation and insert a csv data in the kafka source file. If the spark stream is working expectedly then the newly added data should reflect in  the sparklogs.txt file. 
 
-	echo -e “This, shall, reflect, AGAIN  in, Fiscal.data, and,  Fiscal.sink.data, ” >> fiscal.data
+echo -e “This, shall, reflect, AGAIN  in, Fiscal.data, and,  Fiscal.sink.data, ” >> fiscal.data
 
-#Nodejs
+	#Nodejs
 
 
 Now as the pipeline is tested for streaming, let fire our app.js file which read the actual fiscal.data csv file & inserts one line at a time in the kafka source file consequently creating a stream for kafka.
 
-#OpenSpendingApi
+	#OpenSpendingApi
 
 
  We have use openspending api to get the fiscal data of few countries from Europe package it is a very large data set and contains about Hundred thousands transactions from several countries.
