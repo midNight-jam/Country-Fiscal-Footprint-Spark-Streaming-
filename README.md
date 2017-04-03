@@ -76,4 +76,4 @@ Now as the pipeline is tested for streaming, let fire our app.js file which read
  We have use openspending api to get the fiscal data of few countries from Europe package it is a very large data set and contains about Hundred thousands transactions from several countries.
 
 
-Data is processed as it arrives within the stream,in our case one transaction at a time. As a data is written in to fiscal.txt a kafka message is published under connect-test, this message is read and processed by spark using kafkaConnectStream . In code  we keep printing the processed data till the time, that is for the data that has arrived till now. Below is the put when the stream has ended and there are no more writes in fiscal.data.
+Data is processed as it arrives within the stream,in our case one transaction at a time. As a data is written in to fiscal.txt a kafka message is published under connect-test, this message is read and processed by spark using kafkaConnectStream . In code  we keep printing the processed data till the time, that is for the data that has arrived till now.
